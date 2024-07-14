@@ -1,0 +1,56 @@
+python inner working
+
+python chai.py
+
+code => Byte Code => python VM
+           |
+           Mostly hidden
+
+1. compile to byte code
+               | 
+               low level & platform independent
+-> byte code run faster
+.pyc -> compiled python (frozen binaries)
+ 
+==>  __pycache__
+
+    source change & python version
+     hello.cpython-312.pyc
+    -> works only for imported files
+    -> not for top level files
+
+-> Python Virtual Machine (PVM)
+    - code loop to iterate byte code
+    - run time engine
+    - also known as python interpreter
+
+    Byte code is NOT machine code
+    - python specific interpretation
+    - cpython, jpython, IronPython, Stackless, PyPy
+        |
+        standard implementation
+
+
+from importlib import reload => to reload the import statement if we add any thing after the binary files are generated
+then: reload(filename)  // in python shell
+
+ERRORS:
+NameError: name '' is not defined => no vatiable name like "" in file
+IndentationError
+AttributeError
+SyntaxError
+TypeError: '' object does not support item assignment
+KeyError  // in dictionary
+
+==> Mutable and Immutable
+Mutable => can be changed
+Immutable => cannot be changed
+
+
+memory refrence is either Mutable and Immutable
+
+
+Data Types/ Object Types
+
+- dir( )
+
